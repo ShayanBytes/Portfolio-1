@@ -1,5 +1,7 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Montserrat+Alternates:wght@400;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Grechen+Fuemen&family=Montserrat+Alternates:wght@400;500;600&display=swap');
+
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -33,7 +35,7 @@
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Montserrat Alternates", sans-serif;
-  --second-font: "Grechen Fuemen", cursive;
+  --second-font: "DM Serif Text", cursive;
   --biggest-font-size: 2.5rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -210,7 +212,7 @@ img {
 .perfil__name{
   font: var(--font-regular) var(--biggest-font-size) var(--second-font);
   margin-bottom: 1rem;
-  font-size: 20px;
+  font-size: 40px;
 }
 .perfil_button{
   display: grid;
@@ -226,7 +228,8 @@ img {
 
 
 /*===== INFO =====*/ 
-.info{
+.info,
+.about{
  background-color: var(--container-color);
  padding: 2rem 1.5rem;
  border-radius: 2rem;
@@ -269,6 +272,29 @@ img {
   width: 100%;
  }
 /*===== ABOUT =====*/
+
+.about__name{
+ font-size: var(--normal-font-size);
+ font-weight: var(--font-regular);
+ margin-bottom: 1rem;
+}
+.about__social{
+ display: flex;
+ justify-content: center;
+ column-gap: 1.5rem;
+ margin-block: 2rem;
+}
+.about__link{
+ width: 2.5rem;
+ height: 2.5rem;
+ background-color: var(--white-color);
+ color: var(--black-color);
+ font-size: 1.5rem;
+ border-radius: 50%;
+ display: grid;
+ place-items: center;
+ transition: background-color .4s,color .4s;
+}
 
 
 /*===== SKILLS =====*/
