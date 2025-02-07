@@ -38,6 +38,7 @@
   --second-font: "DM Serif Text", cursive;
   --biggest-font-size: 2.5rem;
   --h1-font-size: 1.5rem;
+ 
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
   --normal-font-size: .938rem;
@@ -262,7 +263,7 @@ img {
  .info__image{
   width:200px;
   justify-self: center;
-  align-self: flex-end;
+  align-self: center;
  }
  .info__description{
   font-size: var(--small-font-size);
@@ -294,6 +295,31 @@ img {
  display: grid;
  place-items: center;
  transition: background-color .4s,color .4s;
+}
+.about__link :hover{
+ background-color: var(--first-color);
+ color: var(--white-color);
+}
+
+.about__image{
+ background:var(--conic-gradient);
+ height: 200px;
+ border-radius:2rem;
+ display: grid;
+ overflow: hidden;
+}
+.about__img{
+ width: 200px;
+ justify-self: center;
+ 
+ transition: translateY(-2.5rem);
+}
+.about__note{
+ font-size: var(--small-font-size);
+ margin-block: 1rem 2rem;
+}
+.about .button{
+ width: 100%;
 }
 
 
