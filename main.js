@@ -49,7 +49,7 @@ const scrollActive = () =>{
 	})
 }
 window.addEventListener('scroll', scrollActive)
-/* ================= SCROLL REVEAL ANIMATIONS ===================== */
+/* ================= SCROLL REVEAL ANIMATIONS ====================== */
 
 const sr= ScrollReveal({
     origin: 'top',
