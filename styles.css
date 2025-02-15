@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Grechen+Fuemen&family=Montserrat+Alternates:wght@400;500;600&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -19,7 +21,7 @@
          -> Choose any color 
          -> Copy the color mode (HSL)
   */
-  --hue: 265;
+  --hue: 365;
   --first-color: hsl(var(--hue), 80%, 49%);
   --first-color-alt: hsl(var(--hue), 76%, 45%);
   --white-color: hsl(0, 0%, 98%);
@@ -29,13 +31,14 @@
   --container-color: hsl(var(--hue), 2%, 10%);
   --conic-gradient: conic-gradient(from 150deg at 50% 45%,
                   hsl(var(--hue), 80%, 20%) 0deg,
-                  hsl(var(--hue), 100%, 48%) 140deg,
+                  hsl(var(--hue), 200%, 48%) 140deg,
                   hsl(var(--hue), 70%, 20%) 360deg);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Montserrat Alternates", sans-serif;
   --second-font: "DM Serif Text", cursive;
+  --third-font: "DynaPuff", cursive;
   --biggest-font-size: 2.5rem;
   --h1-font-size: 1.5rem;
  
@@ -206,14 +209,14 @@ img {
   align-self: flex-end;
   background-color: hsla(0,0%,1%,.1);
   backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(10px);
   padding:1.5rem 1rem;
   border-radius: 1.5rem;
   border: 1px solid hsla(0,0%,100%,.5);
 }
 
 .perfil__name{
-  font: var(--font-regular) var(--biggest-font-size) var(--second-font);
+  font: var(--font-regular) var(--bigest-font-size) var(--second-font);
   margin-bottom: 1rem;
   font-size: 40px;
 }
@@ -227,7 +230,12 @@ img {
  padding: .75rem 0; 
 }
 
-
+.background__text3{
+  position:absolute;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem auto;
+}
 
 
 /*===== INFO =====*/ 
@@ -242,7 +250,7 @@ img {
  width: 2rem;
  height: 2rem;
  background-color: red;
- border-radius: 50%;
+ border-radius: 0%;
 }
 .info__name{
  font: var(--font-regular) var(--h1-font-size) var(--second-font);
@@ -253,20 +261,33 @@ img {
   align-items: center;
   column-gap: .5rem;
  }
- .info__image{
-  background: var(--conic-gradient);
-  height:200px;
+.info__image{
+  position:relative;
+  width: 100%;
+  height: 200px;
   border-radius: 2rem;
-  display: grid;
+  display:flex;
+  align-items: center;
+  justify-content: center;
   margin-block: 1.5rem;
-  
   overflow: hidden;
+  background: var(--conic-gradient) ;
   
  }
- .info__image{
-  width:200px;
-  justify-self: center;
-  align-self: center;
+
+ .info__img{
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+ }
+ .background__text{
+  font: var(--font-regular) 5rem var(--third-font);
+  position: absolute;
+  font-size: 5rem;
+  font-weight: bold;
+  z-index: 0;
+  pointer-events: none;
  }
  .info__description{
   font-size: var(--small-font-size);
@@ -306,6 +327,7 @@ img {
 
 .about__image{
  background:var(--conic-gradient);
+ position: relative;
  height: 200px;
  border-radius:2rem;
  display: grid;
@@ -324,6 +346,14 @@ img {
 .about .button{
  width: 100%;
 }
+.background__text2{
+  font: var(--font-regular) 5rem var(--third-font);
+  position: absolute;
+  font-size: 5rem;
+  font-weight: bold;
+  z-index: 0;
+  pointer-events: none;
+ }
 
 
 /*===== SKILLS =====*/
@@ -641,7 +671,6 @@ z-index: var(--z-tooltip);
 }
 ::-webkit-scrollbar-thumb:hover{
   background-color: hsl(0,0%,30%);
-  border-radius: .5rem;
 }
 /*=============== SCROLL UP ===============*/
 .scrollup{
@@ -650,6 +679,7 @@ z-index: var(--z-tooltip);
   bottom: -50%  ;
   background-color: hsla(0,0%,98%,.1);
   display: inline-flex;
+  padding: 6px;
   color: var(--white-color);
   font-size: 1.25rem;
   backdrop-filter: blur(16px);
@@ -663,10 +693,6 @@ z-index: var(--z-tooltip);
 }
 
 /* Show Scroll Up */
-.scrollup:hover{
-  transform: translateY(-.5rem);
-}
-
 .show-scroll{
   bottom: 8rem;
 }
@@ -679,11 +705,18 @@ z-index: var(--z-tooltip);
   .nav{
     padding: 1rem;
   }
-
+  .background__text{
+    font-size: 45px;
+  }
+  .background__text3{
+    font-size: 14px;
+  }
 }
 
 /* For medium devices */
 @media screen and (min-width: 540px){
+ 
+  
   .nav{
     width: max-content;
   }
@@ -732,6 +765,9 @@ z-index: var(--z-tooltip);
   }
   .show-scroll{
     bottom: 3rem;
+  }
+  .background__text{
+    font-size: 
   }
 }
 
@@ -840,6 +876,9 @@ z-index: var(--z-tooltip);
   }
   .footer__copy{
     margin-top: 7rem;
+  }
+  .background__text{
+    font-size: 2.7rem;
   }
 }
 @media screen and (max-width: 1500px) {
